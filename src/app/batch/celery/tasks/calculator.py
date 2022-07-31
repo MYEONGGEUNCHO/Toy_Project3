@@ -1,7 +1,7 @@
 
 def add(
-    x: int = 2
-    , y: int = 1
+    x: int
+    , y: int
 ) -> int:
     """덧셈 함수
 
@@ -18,8 +18,8 @@ def add(
     return x + y
 
 def sub(
-    x: int = 2
-    , y: int = 1
+    x: int
+    , y: int
 ) -> int:
     """뺄셈 함수
 
@@ -36,8 +36,8 @@ def sub(
     return x - y
 
 def mul(
-    x: int = 2
-    , y: int = 1
+    x: int
+    , y: int
 ) -> int:
     """곱셈 함수
 
@@ -54,8 +54,8 @@ def mul(
     return x * y
 
 def div(
-    x: int = 2
-    , y: int = 1
+    x: int
+    , y: int
 ) -> int:
     """나눗셈 함수
 

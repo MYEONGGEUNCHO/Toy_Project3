@@ -1,30 +1,34 @@
 import click
-from batch.cli.calculator import add, mul
+from batch.cli.calculator import main as cal_main
 
 @click.group()
 def main():
-    """"""
+    pass
+
 @main.command()
-@click.option('-var1', default=2)
-@click.option('-var2', default=1)
+@click.option('-v1', '--var1', default=2)
+@click.option('-v2', '--var2', default=1)
 def add(var1, var2):
     """덧셈함수
     """
     from batch.celery.tasks.calculator import add
-    add(x=var1, y=var2)
+    print(add(
+        x=var1, y=var2
+    ))
 
 @main.command()
-@click.option('-var1', default=2)
-@click.option('-var2', default=1)
+@click.option('-v1', '--var1', default=2)
+@click.option('-v2', '--var2', default=1)
 def mul(var1, var2):
     """곱셈함수
     """
     from batch.celery.tasks.calculator import mul
-    mul(x=var1, y=var2)
+    print(mul(
+        x=var1, y=var2
+    ))
 
 
-main.add_command(add())
-main.add_command(mul())
+main.add_command(cal_main, 'cal-main' )
 
-if __name__ == '__main':
+if __name__ == '__main__':
     main()
