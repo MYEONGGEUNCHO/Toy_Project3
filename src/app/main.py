@@ -26,7 +26,13 @@ def mul(var1, var2):
     print(mul(
         x=var1, y=var2
     ))
-
+    
+@main.command()
+@click.option('-x', default=1)
+@click.option('-y', default=1)
+def plus(x, y):
+    from batch.celery.tasks.function1 import add
+    print(add(a=x, b=y))
 
 main.add_command(cal_main, 'cal-main' )
 

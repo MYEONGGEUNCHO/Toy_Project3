@@ -1,0 +1,15 @@
+pylint
+black
+requests
+fastapi[all]
+sqlalchemy
+click
+celery
+redis
+eventlet
+pytest
+kafka-python
+confluent-kafka
+tqdm
+beautifulsoup4
+html_table_parser
