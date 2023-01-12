@@ -1,8 +1,9 @@
-# Toy_Project3
+# Toy_Project3_Click  
+## 1. Click 사용 이유
+- 프로젝트 실행 및 수행 명령어 main.py에서 모든 cli 관리 목적  
+- main.py 경로에 import 기준 설정  
 
-
-
-## 1. 프로젝트 구조
+## 2. 프로젝트 구조  
 
 ```
 src/
@@ -37,6 +38,7 @@ python group.py greet
 
 hello.py
 ```
+실행
 python hello.py name
 or
 ex)
